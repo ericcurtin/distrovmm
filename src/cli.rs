@@ -3,6 +3,7 @@ use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
 #[command(name = "distrovmm")]
+#[command(version)]
 #[command(about = "Run full-system Linux virtual machines as easily as containers", long_about = None)]
 pub struct Cli {
     #[command(subcommand)]
