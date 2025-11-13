@@ -21,9 +21,7 @@ enum Commands {
 impl Cli {
     pub async fn execute(self) -> Result<()> {
         match self.command {
-            Commands::Run { image } => {
-                crate::vm::run_vm(&image).await
-            }
+            Commands::Run { image } => crate::vm::run_vm(&image).await,
         }
     }
 }
